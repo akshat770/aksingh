@@ -1,0 +1,23 @@
+.projects {
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+  }
+  
+  .project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .project-card {
+    width: 200px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  

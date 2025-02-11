@@ -1,0 +1,28 @@
+.home {
+    text-align: center;
+    color: white;
+    margin-top: 150px;
+  }
+  
+  .highlight {
+    color: #61dafb;
+    font-size: 2rem;
+  }
+  
+  .buttons button {
+    padding: 15px 30px;
+    margin: 15px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #61dafb;
+    color: black;
+    transition: 0.3s;
+  }
+  
+  .buttons button:hover {
+    background: #ff004f;
+    transform: scale(1.1);
+  }
+  

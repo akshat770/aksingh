@@ -1,0 +1,115 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(44, 62, 80, 0.95); /* Semi-transparent dark */
+    padding: 15px 1px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.4s ease-in-out;
+  }
+  
+  /* Navbar Scroll Effect */
+  .navbar.scrolled {
+    background: rgba(34, 47, 62, 0.95);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Navbar Logo */
+  .nav-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Navbar Links */
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  /* Animated Underline */
+  .nav-item {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-item::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  }
+  
+  .nav-item:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  /* Mobile Menu Icon */
+  .menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  /* Mobile Navbar */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      background: rgba(44, 62, 80, 0.95);
+      padding: 15px;
+      text-align: center;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    .nav-item {
+      display: block;
+      padding: 12px;
+    }
+  }
+  
+  @keyframes navbarFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply Animation on Load */
+.navbar {
+    animation: navbarFadeIn 0.8s ease-in-out;
+}

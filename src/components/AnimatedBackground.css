@@ -1,0 +1,41 @@
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #0a192f, #172a45, #223e66, #1b2c4a);
+    background-size: 400% 400%;
+    animation: gradientFlow 18s ease infinite, 
+               softWaves 12s ease-in-out infinite alternate;
+    z-index: -1;
+}
+
+/* Smooth Gradient Flow */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Subtle Light Wave Motion */
+@keyframes softWaves {
+    0% {
+        transform: translateY(0px);
+        opacity: 0.9;
+    }
+    50% {
+        transform: translateY(-8px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 0.9;
+    }
+}
